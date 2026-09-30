@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HỆ THỐNG THI TRỰC TUYẾN - TOÁN THẦY TRUNG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0b57d0;
+            --dark-blue: #041e49;
+            --teal-btn: #008774;
+            --teal-hover: #006e5e;
+            --bg-page: #f8fafd;
+            --card-bg: #ffffff;
+            --border-card: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { background-color: var(--bg-page); color: var(--text-dark); min-height: 100vh; display: flex; flex-direction: column; }
+
+        header {
+            background: linear-gradient(135deg, #0b57d0 0%, #041e49 100%);
+            color: #fff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(4, 30, 73, 0.12);
+        }
+        .header-title-box { display: flex; align-items: center; gap: 12px; }
+        .header-icon { font-size: 24px; color: #93c5fd; }
+        .header-title-box h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.3px; }
+        .header-title-box p { font-size: 13px; opacity: 0.85; }
+
+        .container { max-width: 1020px; margin: 28px auto 40px; padding: 0 16px; width: 100%; flex: 1; }
+
+        .tab-section-title {
+            text-align: center; color: var(--primary-blue); font-size: 21px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 6px;
+        }
+        .tab-section-sub { text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+
+        .tab-bar {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px;
+        }
+        .tab-btn {
+            background: #ffffff; border: 2px solid #d3e3fd; padding: 13px 18px; border-radius: 10px;
+            font-size: 15.5px; font-weight: 800; color: #475569; cursor: pointer; transition: 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .tab-btn:hover { border-color: var(--primary-blue); color: var(--primary-blue); background: #f0f6ff; }
+        .tab-btn.active {
+            background: var(--primary-blue); color: #ffffff; border-color: var(--primary-blue);
+            box-shadow: 0 4px 14px rgba(11, 87, 208, 0.28);
+        }
+
+        .exam-list { display: flex; flex-direction: column; gap: 14px; }
+
+        .exam-card {
+            background: var(--card-bg); border: 1.5px solid var(--border-card);
+            border-left: 6px solid var(--primary-blue); border-radius: 12px;
+            padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .exam-card:hover {
+            transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border-color: #cbd5e1; border-left-color: var(--primary-blue);
+        }
+
+        .card-info { display: flex; flex-direction: column; gap: 6px; }
+        .card-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+        .badge-grade {
+            background: #0284c7; color: #fff; padding: 3px 10px;
+            border-radius: 6px; font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
+        }
+        .card-title { font-size: 19px; font-weight: 800; color: var(--text-dark); }
+
+        .card-actions { display: flex; align-items: center; }
+
+        .btn-start {
+            background: var(--teal-btn); color: #ffffff; text-decoration: none;
+            padding: 11px 22px; border-radius: 8px; font-weight: 800; font-size: 14.5px;
+            display: inline-flex; align-items: center; gap: 8px; transition: 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 135, 116, 0.25); white-space: nowrap;
+        }
+        .btn-start:hover { background: var(--teal-hover); transform: translateX(2px); }
+
+        .empty-state {
+            text-align: center; padding: 50px 20px; background: #fff;
+            border-radius: 12px; border: 2px dashed #cbd5e1; color: var(--text-muted);
+        }
+        .empty-state i { font-size: 42px; color: #cbd5e1; margin-bottom: 12px; }
+
+        footer { text-align: center; padding: 20px; font-size: 13px; color: var(--text-muted); border-top: 1px solid #e2e8f0; }
+
+        @media (max-width: 680px) {
+            .tab-bar { grid-template-columns: 1fr; gap: 8px; }
+            .exam-card { flex-direction: column; align-items: flex-start; gap: 14px; }
+            .card-actions { width: 100%; justify-content: flex-end; }
+            .btn-start { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-title-box">
+        <i class="fa-solid fa-graduation-cap header-icon"></i>
+        <div>
+            <h1>LỚP TOÁN THẦY TRUNG - TN1</h1>
+            <p>Trường THPT Số 1 Tư Nghĩa - Cổng Luyện Thi Trực Tuyến</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="tab-section-title">
+        <i class="fa-regular fa-folder-open"></i> DANH SÁCH BÀI TẬP VÀ ĐỀ THI THEO KHỐI
+    </div>
+    <div class="tab-section-sub">Chọn Khối học bên dưới để tiến hành luyện tập</div>
+
+    <div class="tab-bar">
+        <button class="tab-btn active" id="tab-12" onclick="selectGrade('12')">
+            <i class="fa-solid fa-graduation-cap"></i> KHỐI 12
+        </button>
+        <button class="tab-btn" id="tab-11" onclick="selectGrade('11')">
+            <i class="fa-solid fa-graduation-cap"></i> KHỐI 11
+        </button>
+        <button class="tab-btn" id="tab-10" onclick="selectGrade('10')">
+            <i class="fa-solid fa-graduation-cap"></i> KHỐI 10
+        </button>
+    </div>
+
+    <div class="exam-list" id="examListContainer"></div>
+</div>
+
+<footer>
+    © 2026 Tổ Toán - Trường THPT Số 1 Tư Nghĩa. Hệ thống kiểm tra trực tuyến chất lượng cao.
+</footer>
+
+<script>
+let currentSelectedGrade = '12';
+let allExams = [];
+
+// Danh sách đề dự phòng khi mở trực tiếp file:// từ ổ đĩa
+const FALLBACK_EXAMS = [
+    { "id": "k12_de03", "grade": "12", "title": "Đề số 3", "folder": "k12_de03", "duration": 90, "hidden": false },
+    { "id": "k12_de02", "grade": "12", "title": "Đề số 2", "folder": "k12_de02", "duration": 90, "hidden": false },
+    { "id": "k12_de01", "grade": "12", "title": "Đề số 1", "folder": "k12_de01", "duration": 90, "hidden": false }
+];
+
+function loadManifest() {
+    // Nếu mở file cục bộ từ ổ cứng (file:///), dùng ngay danh sách dự phòng
+    if (window.location.protocol === 'file:') {
+        allExams = FALLBACK_EXAMS;
+        renderExams();
+        return;
+    }
+
+    fetch(`manifest.json?t=${Date.now()}`)
+        .then(res => res.json())
+        .then(data => {
+            allExams = data;
+            renderExams();
+        })
+        .catch(err => {
+            console.warn("Không tải được manifest qua fetch, dùng dữ liệu dự phòng:", err);
+            allExams = FALLBACK_EXAMS;
+            renderExams();
+        });
+}
+
+function selectGrade(grade) {
+    currentSelectedGrade = grade;
+    ['12', '11', '10'].forEach(g => {
+        const btn = document.getElementById(`tab-${g}`);
+        if (btn) {
+            if (g === grade) btn.classList.add('active');
+            else btn.classList.remove('active');
+        }
+    });
+    renderExams();
+}
+
+function renderExams() {
+    const container = document.getElementById('examListContainer');
+    let filtered = allExams.filter(e => String(e.grade) === currentSelectedGrade && !e.hidden);
+
+    if (filtered.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <i class="fa-solid fa-folder-open"></i>
+                <p>Khối ${currentSelectedGrade} hiện chưa có đề thi nào mở.</p>
+            </div>`;
+        return;
+    }
+
+    filtered.sort((a, b) => {
+        const numA = parseInt((a.title || a.id).replace(/\D/g, '')) || 0;
+        const numB = parseInt((b.title || b.id).replace(/\D/g, '')) || 0;
+        return numB - numA;
+    });
+
+    let html = '';
+    filtered.forEach(exam => {
+        let displayTitle = exam.title;
+        const m = (exam.title || exam.id).match(/\d+/);
+        if (m) {
+            displayTitle = `Đề số ${parseInt(m[0], 10)}`;
+        }
+
+        html += `
+        <div class="exam-card" id="card_${exam.id}">
+            <div class="card-info">
+                <div class="card-meta">
+                    <span class="badge-grade">Khối ${exam.grade}</span>
+                    <span><i class="fa-regular fa-clock"></i> ${exam.duration || 90} Phút</span>
+                </div>
+                <div class="card-title">${displayTitle}</div>
+            </div>
+            <div class="card-actions">
+                <a href="exam_player.html?exam=${exam.folder || exam.id}" class="btn-start">
+                    🚀 BẮT ĐẦU LÀM BÀI <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>`;
+    });
+
+    container.innerHTML = html;
+}
+
+loadManifest();
+</script>
+</body>
+</html>
