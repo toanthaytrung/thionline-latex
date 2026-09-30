@@ -343,18 +343,18 @@
 </div>
 
 <script>
-// ĐƯỜNG LINK WEB APP CHUẨN XÁC ĐÃ SỬA CHỮ "z"
+// ĐƯỜNG LINK WEB APP CHUẨN XÁC CỦA THẦY TRÊN CSDL_THIONLINE_LATEX
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0JM4eTExZXpHcSCZlivYdPSuFnwANfzQ67_KSRVaexO2Fe5kbSvl2wT6mPXS_w3T-/exec";
 
 const DEFAULT_ANSWER_KEY = {
-    "p1": { "1": "C", "2": "B", "3": "D", "4": "B", "5": "C", "6": "D", "7": "C", "8": "D", "9": "C", "10": "C", "11": "A", "12": "B" },
+    "p1": { "1": "D", "2": "C", "3": "A", "4": "B", "5": "A", "6": "D", "7": "B", "8": "A", "9": "D", "10": "A", "11": "D", "12": "C" },
     "p2": {
-        "1": { "a": "S", "b": "Đ", "c": "S", "d": "Đ" },
-        "2": { "a": "S", "b": "Đ", "c": "Đ", "d": "Đ" },
+        "1": { "a": "S", "b": "Đ", "c": "S", "d": "S" },
+        "2": { "a": "Đ", "b": "Đ", "c": "S", "d": "Đ" },
         "3": { "a": "S", "b": "Đ", "c": "Đ", "d": "Đ" },
-        "4": { "a": "Đ", "b": "S", "c": "Đ", "d": "Đ" }
+        "4": { "a": "Đ", "b": "Đ", "c": "Đ", "d": "S" }
     },
-    "p3": { "1": "100", "2": "111", "3": "11,5", "4": "2", "5": "135", "6": "101" }
+    "p3": { "1": "17", "2": "8", "3": "1,45", "4": "196", "5": "1,65", "6": "24" }
 };
 
 let currentStudent = { phone: "", name: "", stuClass: "", attempt: 1, maxAttempts: 3, examCode: "" };
@@ -407,7 +407,6 @@ function shuffleArray(arr, rng) {
     return a;
 }
 
-// Chuẩn hóa ký tự Đúng / Sai hỗ trợ mọi kiểu dữ liệu từ đề
 function normalizeTF(val) {
     if (!val) return '';
     const v = String(val).trim().toUpperCase();
@@ -458,7 +457,7 @@ function generateShuffledExam(seedStr) {
         });
     }
 
-    // 2. Xáo trộn Phần 2 (Giữ nguyên cấu trúc ý a, b, c, d của từng câu và chuyển đúng đáp án)
+    // 2. Xáo trộn Phần 2 (Giữ nguyên cấu trúc câu)
     if (newExam.part2 && newExam.part2.length > 0) {
         let p2WithOriginalIndex = newExam.part2.map((q, idx) => ({ ...q, originalIdx: idx + 1 }));
         let shuffledP2 = shuffleArray(p2WithOriginalIndex, rng);
@@ -493,35 +492,8 @@ function cleanTypo(str) {
         .replace(/&nbsp;/g, ' ')
         .replace(/\u00a0/g, ' ')
         .replace(/^((?:\s*<[^>]+>)*\s*)(?:Câu|Bài)\s*\d+[\s\.:\)]*/i, '$1')
-        .replace(/ông\s+Bình\s+d[oòóỏõọôồốổỗộuùúủũụ\S]*?ng\s+để/gi, 'ông Bình dùng để')
-        .replace(/\bd[oòóỏõọôồốổỗộuùúủũụ\S]*?ng\s+để\s+hoàn\s+thành/gi, 'dùng để hoàn thành')
         .replace(/làm\s+\S{1,6}\s+đến/gi, 'làm tròn đến')
-        .replace(/làm\s+tr[^\s]*?n/gi, 'làm tròn')
-        .replace(/làm\s+t[ṛr][^\s]*?n/gi, 'làm tròn')
-        .replace(/còn\s+sông/gi, 'con sông')
-        .replace(/bờ\s+còn\s+sông/gi, 'bờ con sông')
-        .replace(/\bB\S?nh\b/g, 'Bình')
-        .replace(/\bb\S?nh\b/g, 'bình')
-        .replace(/\bh\S?nh\b/g, 'hình')
-        .replace(/\bH\S?nh\b/g, 'Hình')
-        .replace(/\btr\S?nh\b/g, 'trình')
-        .replace(/\bTr\S?nh\b/g, 'Trình')
-        .replace(/\bđ\S?nh\b/g, 'đỉnh')
-        .replace(/\bĐ\S?nh\b/g, 'Đỉnh')
-        .replace(/\bt\S?nh\b/g, 'tính')
-        .replace(/\bT\S?nh\b/g, 'Tính')
-        .replace(/\bm\S?nh\b/g, 'mình')
-        .replace(/\bM\S?nh\b/g, 'Mình')
-        .replace(/\bth[\u0300-\u036f]\b/g, 'thì')
-        .replace(/\bTh[\u0300-\u036f]\b/g, 'Thì')
-        .replace(/\bngh\S?n\b/g, 'nghìn')
-        .replace(/\bNgh\S?n\b/g, 'Nghìn')
-        .replace(/\bT\S?m\b/g, 'Tìm')
-        .replace(/\bt\S?m\b/g, 'tìm')
-        .replace(/đă/g, 'đã')
-        .replace(/Đă/g, 'Đã')
-        .replace(/măn/g, 'mãn')
-        .replace(/Măn/g, 'Mãn');
+        .replace(/làm\s+tr[^\s]*?n/gi, 'làm tròn');
 
     const folder = currentExamFolder || 'k12_de01';
     res = res.replace(/src=["'](?:k\d+_de\d+\/)?temp_exam_files\/([^"']+)["']/g, `src="${folder}/temp_exam_files/$1"`);
@@ -554,7 +526,7 @@ window.handleStudentAuthResponse = function(data) {
     btn.disabled = false;
     btn.innerText = "VÀO PHÒNG THI";
 
-    if (data && data.status === "OK" && data.student && data.student.name && data.student.name !== "Học sinh") {
+    if (data && data.status === "OK" && data.student && data.student.name) {
         const localUsed = getLocalAttempts(cleanPhone, examId);
         let nextAttempt = localUsed + 1;
 
@@ -639,19 +611,20 @@ function checkStudentAuth() {
     btn.disabled = true;
     btn.innerText = "ĐANG KIỂM TRA...";
     msg.style.color = "var(--iexam-blue)";
-    msg.innerText = "Đang kiểm tra danh sách phòng thi...";
+    msg.innerText = "Đang kết nối danh sách phòng thi...";
 
     const oldScript = document.getElementById('jsonpAuthScript');
     if (oldScript) oldScript.remove();
 
     if (authTimeoutTimer) clearTimeout(authTimeoutTimer);
 
+    // Thời gian chờ 15s phòng khi Google Sheets khởi động lạnh
     authTimeoutTimer = setTimeout(function() {
         btn.disabled = false;
         btn.innerText = "VÀO PHÒNG THI";
         msg.style.color = "var(--danger-color)";
         msg.innerText = "Máy chủ phản hồi chậm hoặc gián đoạn mạng. Em vui lòng bấm thử lại!";
-    }, 10000);
+    }, 15000);
 
     const script = document.createElement('script');
     script.id = 'jsonpAuthScript';
@@ -665,7 +638,7 @@ function checkStudentAuth() {
         btn.disabled = false;
         btn.innerText = "VÀO PHÒNG THI";
         msg.style.color = "var(--danger-color)";
-        msg.innerText = "Không thể kết nối đến máy chủ danh sách thí sinh! Vui lòng thử lại.";
+        msg.innerText = "Không thể kết nối đến máy chủ Google Sheets! Vui lòng thử lại.";
     };
 
     document.body.appendChild(script);
@@ -745,7 +718,7 @@ function buildExamInterface() {
         });
     }
 
-    // PHẦN II (Định dạng chuẩn xác biến ${item.key})
+    // PHẦN II
     if (examSource.part2 && examSource.part2.length > 0) {
         html += `<div class="part-title-banner">PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG / SAI (${examSource.part2.length} CÂU)</div>
                  <div class="part-instruction">Thí sinh trả lời từ câu 1 đến câu ${examSource.part2.length}. Trong mỗi ý a), b), c), d), chọn Đúng hoặc Sai.</div>`;
@@ -812,6 +785,7 @@ function buildExamInterface() {
     container.innerHTML = html;
     buildNavGrid();
 
+    // Xử lý kích thước ảnh tự thích nghi
     document.querySelectorAll('.q-content img, .sol-box img').forEach(img => {
         function checkImage() {
             if (img.naturalHeight >= 65 || img.naturalWidth >= 120) {
@@ -826,6 +800,7 @@ function buildExamInterface() {
         else img.onload = checkImage;
     });
 
+    // Vẽ công thức KaTeX sắc nét
     if (window.renderMathInElement) {
         renderMathInElement(container, {
             delimiters: [
@@ -935,7 +910,7 @@ function runTimer() {
     }, 1000);
 }
 
-// HÀM CHẤM ĐIỂM TOÀN DIỆN (CHỈ BÁO ĐÚNG/SAI LỰA CHỌN CỦA HỌC SINH, KHÔNG LỘ ĐÁP ÁN ĐÚNG CỦA ĐỀ)
+// BẢO MẬT SƯ PHẠM: CHỈ ĐÁNH DẤU CÂU ĐÚNG/SAI CỦA HỌC SINH, TUYỆT ĐỐI KHÔNG LỘ ĐÁP ÁN ĐÚNG CỦA ĐỀ
 function gradeExam() {
     let scoreP1 = 0;
     let scoreP2 = 0;
@@ -963,7 +938,6 @@ function gradeExam() {
             if (navBtn) navBtn.className = 'nav-item rev-correct';
         } else {
             if (navBtn) navBtn.className = 'nav-item rev-wrong';
-            // Chỉ đánh dấu ô học sinh chọn bị sai nếu có chọn, KHÔNG lộ ô đáp án đúng
             if (stuAns) {
                 const wrongLbl = document.getElementById(`lbl_p1_${i}_${stuAns}`);
                 if (wrongLbl) wrongLbl.classList.add('wrong-opt');
@@ -971,7 +945,7 @@ function gradeExam() {
         }
     }
 
-    // CHẤM PHẦN II (TỰ ĐỘNG CHUẨN HÓA KÝ TỰ Đ/D/T VÀ S/F)
+    // CHẤM PHẦN II
     const p2Weights = [0, 0.1, 0.25, 0.5, 1.0];
     for (let i = 1; i <= 4; i++) {
         let correctCount = 0;
@@ -995,7 +969,6 @@ function gradeExam() {
                 if (row) row.style.background = '#fef7f7';
             }
 
-            // Chỉ tô màu nút học sinh vừa bấm là Đúng (xanh) hay Sai (đỏ), KHÔNG hiện badge lộ đáp án đúng
             if (userChoice === 'Đ') {
                 if (btnT) btnT.className = isItemCorrect ? 'btn-tf grade-correct' : 'btn-tf grade-wrong';
             } else if (userChoice === 'S') {
@@ -1101,18 +1074,17 @@ function submitExam() {
 
     document.getElementById('scoreModal').style.display = 'flex';
 
-    // Gửi điểm về Google Sheets
+    // Gửi điểm và LƯU VẾT BÀI LÀM về Google Sheets
     const payload = {
-    phone: currentStudent.phone,
-    student_name: currentStudent.name,
-    student_class: currentStudent.stuClass,
-    exam_id: examId,
-    total_score: result.totalScore,
-    attempt: currentStudent.attempt,
-    // LƯU VẾT TOÀN BỘ PHƯƠNG ÁN HỌC SINH ĐÃ CHỌN:
-    answers: JSON.stringify(studentAnswers),
-    exam_code: currentStudent.examCode || ""
-};
+        phone: currentStudent.phone,
+        student_name: currentStudent.name,
+        student_class: currentStudent.stuClass,
+        exam_id: examId,
+        total_score: result.totalScore,
+        attempt: currentStudent.attempt,
+        answers: JSON.stringify(studentAnswers),
+        exam_code: currentStudent.examCode || ""
+    };
 
     fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
@@ -1160,16 +1132,13 @@ function retryExamSession() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// CHỈ MỞ ĐÁP ÁN ĐÚNG KHI HỌC SINH ĐỦ ĐIỀU KIỆN VÀ BẤM XEM LỜI GIẢI CHI TIẾT
 function showSolutionDetail() {
     document.getElementById('scoreModal').style.display = 'none';
 
-    // 1. Mở toàn bộ hộp lời giải chi tiết
     document.querySelectorAll('.sol-box').forEach(box => {
         box.style.display = 'block';
     });
 
-    // 2. Bây giờ mới hiển thị ĐÁP ÁN ĐÚNG cho học sinh xem
     const sourceExam = getActiveExam();
     const rawKey = (activeExamData && activeExamData.answerKey && Object.keys(activeExamData.answerKey).length > 0)
         ? activeExamData.answerKey
@@ -1181,7 +1150,6 @@ function showSolutionDetail() {
     const keyP2 = (activeAnswerKey && activeAnswerKey.p2) ? activeAnswerKey.p2 : rawKey.p2;
     const keyP3 = (activeAnswerKey && activeAnswerKey.p3) ? activeAnswerKey.p3 : rawKey.p3;
 
-    // Tô xanh đáp án chuẩn Phần I
     for (let i = 1; i <= 12; i++) {
         const correctAns = keyP1 ? keyP1[i.toString()] : undefined;
         if (correctAns) {
@@ -1190,7 +1158,6 @@ function showSolutionDetail() {
         }
     }
 
-    // Hiện nhãn đáp án Đúng/Sai chuẩn Phần II
     for (let i = 1; i <= 4; i++) {
         const keyItem = (keyP2 && keyP2[i.toString()]) ? keyP2[i.toString()] : {};
         const stuItem = studentAnswers.p2[i] || {};
@@ -1215,7 +1182,6 @@ function showSolutionDetail() {
         });
     }
 
-    // Hiện nhãn đáp án chuẩn Phần III
     for (let i = 1; i <= 6; i++) {
         const keySpan = document.getElementById(`p3_key_${i}`);
         if (keySpan && keyP3) {
