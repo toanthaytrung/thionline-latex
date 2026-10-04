@@ -6,18 +6,18 @@ window.EXAM_DATA = {
     "part1": [
         {
             "id": 1,
-            "content": "Tính độ dài của cung trên đường tṛn có bán kính $R=20\\left(cm \\right)$ và số đo $\\alpha =\\dfrac{2\\pi }{5}$",
+            "content": "Tính độ dài của cung trên đường tṛn có bán kính $R=20\\text{ cm}$ và số đo $\\alpha =\\dfrac{2\\pi }{5}$",
             "options": [
-                "$15,7\\left(cm \\right)$",
-                "$18,8\\,\\left(cm \\right)$",
-                "$25,13\\,\\left(cm \\right)$",
-                "$21,99\\,\\left(cm \\right)$"
+                "$15,7\\text{ cm}$",
+                "$18,8\\text{ cm}$",
+                "$25,13\\text{ cm}$",
+                "$21,99\\text{ cm}$"
             ],
-            "solution": "Ta có $l=R.\\alpha =20.\\dfrac{2\\pi }{5}=8\\pi \\approx 25,13\\,\\left(cm \\right)$. Đáp án C"
+            "solution": "Ta có $l=R.\\alpha =20.\\dfrac{2\\pi }{5}=8\\pi \\approx 25,13\\text{ cm}$. Đáp án C"
         },
         {
             "id": 2,
-            "content": "Trên đường tṛn lượng giác điểm gốc $A$, điểm $M$ thuộc đường tṛn sao cho cung lượng giác $\\overset{\\curvearrowright }{\\mathop{AM}}\\,$ có số đo $55^\\circ $. Gọi $N$ là điểm đối xứng với $M$ qua trục tung. Số đo của góc lượng giác $\\left(OA,\\,ON \\right)$ là",
+            "content": "Trên đường tṛn lượng giác điểm gốc $A$, điểm $M$ thuộc đường tṛn sao cho cung lượng giác $\\overset{\\curvearrowright}{AM}$ có số đo $55^\\circ $. Gọi $N$ là điểm đối xứng với $M$ qua trục tung. Số đo của góc lượng giác $\\left(OA,\\,ON \\right)$ là",
             "options": [
                 "$55^\\circ +k360^\\circ,\\,k\\in \\mathbb{Z}$",
                 "$125^\\circ +k360^\\circ,\\,k\\in \\mathbb{Z}$",
@@ -28,25 +28,25 @@ window.EXAM_DATA = {
         },
         {
             "id": 3,
-            "content": "Cho $\\sin \\alpha =\\dfrac{1}{3}$, $\\dfrac{\\pi }{2}<\\alpha <\\pi $. Tính $\\tan \\alpha $.",
+            "content": "Cho $\\sin \\alpha =\\dfrac{1}{3}$, $\\dfrac{\\pi }{2} < \\alpha < \\pi $. Tính $\\tan \\alpha $.",
             "options": [
                 "$\\tan \\alpha =\\dfrac{1}{2\\sqrt{2}}$",
                 "$\\tan \\alpha =-\\dfrac{1}{2\\sqrt{2}}$",
                 "$\\tan \\alpha =2\\sqrt{2}$",
                 "$\\tan \\alpha =-2\\sqrt{2}$"
             ],
-            "solution": "Ta có ${{\\cos }^{2}}\\alpha =1-{{\\sin }^{2}}\\alpha =1-\\dfrac{1}{9}=\\dfrac{8}{9}$, mà $\\dfrac{\\pi }{2}<\\alpha <\\pi $ nên $\\cos \\alpha =-\\dfrac{2\\sqrt{2}}{3}$ $\\Rightarrow \\tan \\alpha =-\\dfrac{1}{2\\sqrt{2}}$."
+            "solution": "Ta có ${{\\cos }^{2}}\\alpha =1-{{\\sin }^{2}}\\alpha =1-\\dfrac{1}{9}=\\dfrac{8}{9}$, mà $\\dfrac{\\pi }{2} < \\alpha < \\pi $ nên $\\cos \\alpha =-\\dfrac{2\\sqrt{2}}{3}$ $\\Rightarrow \\tan \\alpha =-\\dfrac{1}{2\\sqrt{2}}$."
         },
         {
             "id": 4,
             "content": "Giải phương tŕnh: $\\sin 3x=\\cos x$.",
             "options": [
-                "$\\left[ \\begin{align} & x=\\dfrac{3\\pi }{8}+k2\\pi \\\\ & x=\\dfrac{\\pi }{4}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=-\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ & x=\\dfrac{\\pi }{4}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ & x=\\dfrac{\\pi }{4}+k\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=\\dfrac{\\pi }{8}+k2\\pi \\\\ & x=-\\dfrac{\\pi }{4}+k\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$"
+                "$\\left[ \\begin{array}{l} x=\\dfrac{3\\pi }{8}+k2\\pi \\\\ x=\\dfrac{\\pi }{4}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=-\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ x=\\dfrac{\\pi }{4}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ x=\\dfrac{\\pi }{4}+k\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=\\dfrac{\\pi }{8}+k2\\pi \\\\ x=-\\dfrac{\\pi }{4}+k\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$"
             ],
-            "solution": "$\\sin 3x=\\cos x\\Leftrightarrow \\sin 3x=\\sin \\left(\\dfrac{\\pi }{2}-x \\right)\\Leftrightarrow \\left[ \\begin{align} & 3x=\\dfrac{\\pi }{2}-x+k2\\pi \\\\ & 3x=\\pi -\\left(\\dfrac{\\pi }{2}-x \\right)+k2\\pi \\\\ \\end{align} \\right.\\Leftrightarrow \\left[ \\begin{align} & x=\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ & x=\\dfrac{\\pi }{4}+k\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$."
+            "solution": "$\\sin 3x=\\cos x\\Leftrightarrow \\sin 3x=\\sin \\left(\\dfrac{\\pi }{2}-x \\right)\\Leftrightarrow \\left[ \\begin{array}{l} 3x=\\dfrac{\\pi }{2}-x+k2\\pi \\\\ 3x=\\pi -\\left(\\dfrac{\\pi }{2}-x \\right)+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} x=\\dfrac{\\pi }{8}+\\dfrac{k\\pi }{2} \\\\ x=\\dfrac{\\pi }{4}+k\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$."
         },
         {
             "id": 5,
@@ -129,18 +129,18 @@ window.EXAM_DATA = {
             "id": 12,
             "content": "Giải phương tŕnh: $\\cos \\left(x-\\dfrac{\\pi }{3} \\right)=\\dfrac{\\sqrt{3}}{2}$.",
             "options": [
-                "$\\left[ \\begin{align} & x=k2\\pi \\\\ & x=\\dfrac{2\\pi }{3}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=\\dfrac{\\pi }{2}+k2\\pi \\\\ & x=\\dfrac{\\pi }{6}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=\\dfrac{5\\pi }{6}+k2\\pi \\\\ & x=\\dfrac{\\pi }{2}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
-                "$\\left[ \\begin{align} & x=-\\dfrac{\\pi }{6}+k2\\pi \\\\ & x=\\dfrac{\\pi }{2}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$"
+                "$\\left[ \\begin{array}{l} x=k2\\pi \\\\ x=\\dfrac{2\\pi }{3}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=\\dfrac{\\pi }{2}+k2\\pi \\\\ x=\\dfrac{\\pi }{6}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=\\dfrac{5\\pi }{6}+k2\\pi \\\\ x=\\dfrac{\\pi }{2}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$",
+                "$\\left[ \\begin{array}{l} x=-\\dfrac{\\pi }{6}+k2\\pi \\\\ x=\\dfrac{\\pi }{2}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$"
             ],
-            "solution": "$\\cos \\left(x-\\dfrac{\\pi }{3} \\right)=\\dfrac{\\sqrt{3}}{2}\\Leftrightarrow \\left[ \\begin{align} & x-\\dfrac{\\pi }{3}=\\dfrac{\\pi }{6}+k2\\pi \\\\ & x-\\dfrac{\\pi }{3}=-\\dfrac{\\pi }{6}+k2\\pi \\\\ \\end{align} \\right.\\Leftrightarrow \\left[ \\begin{align} & x=\\dfrac{\\pi }{2}+k2\\pi \\\\ & x=\\dfrac{\\pi }{6}+k2\\pi \\\\ \\end{align} \\right.\\left(k\\in \\mathbb{Z} \\right)$."
+            "solution": "$\\cos \\left(x-\\dfrac{\\pi }{3} \\right)=\\dfrac{\\sqrt{3}}{2}\\Leftrightarrow \\left[ \\begin{array}{l} x-\\dfrac{\\pi }{3}=\\dfrac{\\pi }{6}+k2\\pi \\\\ x-\\dfrac{\\pi }{3}=-\\dfrac{\\pi }{6}+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} x=\\dfrac{\\pi }{2}+k2\\pi \\\\ x=\\dfrac{\\pi }{6}+k2\\pi \\end{array} \\right.\\left(k\\in \\mathbb{Z} \\right)$."
         }
     ],
     "part2": [
         {
             "id": 1,
-            "content": "Cho góc lượng giác $\\alpha $ thỏa mãn $\\dfrac{\\pi }{2}<\\alpha <\\pi $ và $\\sin \\alpha =\\dfrac{4}{5}$.",
+            "content": "Cho góc lượng giác $\\alpha $ thỏa mãn $\\dfrac{\\pi }{2} < \\alpha < \\pi $ và $\\sin \\alpha =\\dfrac{4}{5}$.",
             "items": [
                 {
                     "key": "a",
@@ -159,7 +159,7 @@ window.EXAM_DATA = {
                     "text": "Giá trị của biểu thức $P=\\dfrac{\\sin 2\\alpha -\\cos 2\\alpha }{1+\\cot \\alpha }$ bằng $\\dfrac{68}{25}$."
                 }
             ],
-            "solution": "a) Khoảng $\\dfrac{\\pi }{2}<\\alpha <\\pi $ thuộc góc phần tư thứ II. Đúng<br>b) Ở góc phần tư thứ II, hoành độ âm nên $\\cos \\alpha <0$. Sai<br>c) $\\cos \\alpha =-\\sqrt{1-{{\\sin }^{2}}\\alpha }=-\\sqrt{1-\\dfrac{16}{25}}=-\\dfrac{3}{5}$.<br>$\\tan \\alpha =\\dfrac{\\sin \\alpha }{\\cos \\alpha }=\\dfrac{4/5}{-3/5}=-\\dfrac{4}{3}$. Đúng<br>d) $\\sin 2\\alpha =2\\sin \\alpha \\cos \\alpha =2\\cdot \\dfrac{4}{5}\\cdot \\left(-\\dfrac{3}{5} \\right)=-\\dfrac{24}{25}$.<br>$\\cos 2\\alpha =1-2{{\\sin }^{2}}\\alpha =1-2\\cdot \\dfrac{16}{25}=-\\dfrac{7}{25}$.<br>Tử số: $\\sin 2\\alpha -\\cos 2\\alpha =-\\dfrac{24}{25}-\\left(-\\dfrac{7}{25} \\right)=-\\dfrac{17}{25}$.<br>Mẫu số: $\\cot \\alpha =-\\dfrac{3}{4}\\Rightarrow 1+\\cot \\alpha =1-\\dfrac{3}{4}=\\dfrac{1}{4}$.<br>Do đó: $P=\\dfrac{-17/25}{1/4}=-\\dfrac{68}{25}\\ne \\dfrac{68}{25}$. Sai"
+            "solution": "a) Khoảng $\\dfrac{\\pi }{2} < \\alpha < \\pi $ thuộc góc phần tư thứ II. Đúng<br>b) Ở góc phần tư thứ II, hoành độ âm nên $\\cos \\alpha <0$. Sai<br>c) $\\cos \\alpha =-\\sqrt{1-{{\\sin }^{2}}\\alpha }=-\\sqrt{1-\\dfrac{16}{25}}=-\\dfrac{3}{5}$.<br>$\\tan \\alpha =\\dfrac{\\sin \\alpha }{\\cos \\alpha }=\\dfrac{4/5}{-3/5}=-\\dfrac{4}{3}$. Đúng<br>d) $\\sin 2\\alpha =2\\sin \\alpha \\cos \\alpha =2\\cdot \\dfrac{4}{5}\\cdot \\left(-\\dfrac{3}{5} \\right)=-\\dfrac{24}{25}$.<br>$\\cos 2\\alpha =1-2{{\\sin }^{2}}\\alpha =1-2\\cdot \\dfrac{16}{25}=-\\dfrac{7}{25}$.<br>Tử số: $\\sin 2\\alpha -\\cos 2\\alpha =-\\dfrac{24}{25}-\\left(-\\dfrac{7}{25} \\right)=-\\dfrac{17}{25}$.<br>Mẫu số: $\\cot \\alpha =-\\dfrac{3}{4}\\Rightarrow 1+\\cot \\alpha =1-\\dfrac{3}{4}=\\dfrac{1}{4}$.<br>Do đó: $P=\\dfrac{-17/25}{1/4}=-\\dfrac{68}{25}\\ne \\dfrac{68}{25}$. Sai"
         },
         {
             "id": 2,
@@ -186,23 +186,23 @@ window.EXAM_DATA = {
         },
         {
             "id": 3,
-            "content": "Xét phương tŕnh lượng giác: $\\cos 2x+3\\sin x-2=0\\left(* \\right)$.",
+            "content": "Xét phương tŕnh lượng giác: $\\cos 2x+3\\sin x-2=0$ (*).",
             "items": [
                 {
                     "key": "a",
-                    "text": "Đưa về phương tŕnh bậc hai theo $\\sin x$, phương tŕnh $\\left(* \\right)$ tương đương với $2{{\\sin }^{2}}x-3\\sin x+1=0$."
+                    "text": "Đưa về phương tŕnh bậc hai theo $\\sin x$, phương tŕnh (*) tương đương với $2{{\\sin }^{2}}x-3\\sin x+1=0$."
                 },
                 {
                     "key": "b",
-                    "text": "Phương tŕnh $\\left(* \\right)$ tương đương với phương tŕnh $\\left(\\sin x-1 \\right)\\left(2\\sin x-1 \\right)=0$."
+                    "text": "Phương tŕnh (*) tương đương với phương tŕnh $\\left(\\sin x-1 \\right)\\left(2\\sin x-1 \\right)=0$."
                 },
                 {
                     "key": "c",
-                    "text": "Trong khoảng $\\left(0;2\\pi \\right)$, phương tŕnh $\\left(* \\right)$ có đúng 3 nghiệm phân biệt."
+                    "text": "Trong khoảng $\\left(0;2\\pi \\right)$, phương tŕnh (*) có đúng 3 nghiệm phân biệt."
                 },
                 {
                     "key": "d",
-                    "text": "Tổng tất cả các nghiệm của phương tŕnh $\\left(* \\right)$ thuộc đoạn $\\left[ 0;2\\pi \\right]$ bằng $3\\pi $."
+                    "text": "Tổng tất cả các nghiệm của phương tŕnh (*) thuộc đoạn $\\left[ 0;2\\pi \\right]$ bằng $3\\pi $."
                 }
             ],
             "solution": "a) $\\cos 2x=1-2{{\\sin }^{2}}x$. Thay vào phương tŕnh:<br>$1-2{{\\sin }^{2}}x+3\\sin x-2=0\\Leftrightarrow -2{{\\sin }^{2}}x+3\\sin x-1=0\\Leftrightarrow 2{{\\sin }^{2}}x-3\\sin x+1=0$.<br>b) Phương tŕnh bậc hai có $a+b+c=2-3+1=0$, phân tích thành $\\left(\\sin x-1 \\right)\\left(2\\sin x-1 \\right)=0$<br>c) Phương tŕnh tương đương:<br>$\\sin x=1\\Leftrightarrow x=\\dfrac{\\pi }{2}+k2\\pi $. Trên $\\left(0;2\\pi \\right)$ có đúng 1 nghiệm là $x=\\dfrac{\\pi }{2}$.<br>$\\sin x=\\dfrac{1}{2}\\Leftrightarrow x=\\dfrac{\\pi }{6}+k2\\pi $ hoặc $x=\\dfrac{5\\pi }{6}+k2\\pi $. Trên $\\left(0;2\\pi \\right)$ có 2 nghiệm là $x=\\dfrac{\\pi }{6}$ và $x=\\dfrac{5\\pi }{6}$.<br>Tổng cộng có đúng 3 nghiệm phân biệt trên $\\left(0;2\\pi \\right)$.<br>d) Xét trên đoạn $\\left[ 0;2\\pi \\right]$, các nghiệm là $x\\in \\left\\{ \\dfrac{\\pi }{6};\\dfrac{\\pi }{2};\\dfrac{5\\pi }{6} \\right\\}$.<br>Tổng các nghiệm bằng $\\dfrac{\\pi }{6}+\\dfrac{\\pi }{2}+\\dfrac{5\\pi }{6}=\\dfrac{9\\pi }{6}=\\dfrac{3\\pi }{2}\\ne 3\\pi $."
@@ -235,7 +235,7 @@ window.EXAM_DATA = {
         {
             "id": 1,
             "content": "T́m số nghiệm của phương tŕnh lượng giác $\\cos \\left(3x-\\dfrac{\\pi }{6} \\right)=\\dfrac{\\sqrt{3}}{2}$ trên khoảng $\\left(0;\\pi \\right)$.",
-            "solution": "Đáp án: 3<br>$\\cos \\left(3x-\\dfrac{\\pi }{6} \\right)=\\dfrac{\\sqrt{3}}{2}=\\cos \\dfrac{\\pi }{6}\\Leftrightarrow \\left[ \\begin{matrix} 3x-\\dfrac{\\pi }{6}=\\dfrac{\\pi }{6}+k2\\pi \\\\ 3x-\\dfrac{\\pi }{6}=-\\dfrac{\\pi }{6}+k2\\pi \\\\ \\end{matrix} \\right.\\Leftrightarrow \\left[ \\begin{matrix} x=\\dfrac{\\pi }{9}+\\dfrac{k2\\pi }{3} \\\\ x=\\dfrac{k2\\pi }{3} \\\\ \\end{matrix} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Xét trên khoảng $\\left(0;\\pi \\right)$:<br>Nhánh $x=\\dfrac{\\pi }{9}+\\dfrac{k2\\pi }{3}$: với $k=0\\Rightarrow x=\\dfrac{\\pi }{9}$; với $k=1\\Rightarrow x=\\dfrac{7\\pi }{9}$ (thỏa mãn 2 nghiệm).<br>Nhánh $x=\\dfrac{k2\\pi }{3}$: với $k=1\\Rightarrow x=\\dfrac{2\\pi }{3}$ (thỏa mãn 1 nghiệm).<br>Vậy phương tŕnh có tất cả 3 nghiệm trên khoảng $\\left(0;\\pi \\right)$."
+            "solution": "Đáp án: 3<br>$\\cos \\left(3x-\\dfrac{\\pi }{6} \\right)=\\dfrac{\\sqrt{3}}{2}=\\cos \\dfrac{\\pi }{6}\\Leftrightarrow \\left[ \\begin{array}{l} 3x-\\dfrac{\\pi }{6}=\\dfrac{\\pi }{6}+k2\\pi \\\\ 3x-\\dfrac{\\pi }{6}=-\\dfrac{\\pi }{6}+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} x=\\dfrac{\\pi }{9}+\\dfrac{k2\\pi }{3} \\\\ x=\\dfrac{k2\\pi }{3} \\end{array} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Xét trên khoảng $\\left(0;\\pi \\right)$:<br>Nhánh $x=\\dfrac{\\pi }{9}+\\dfrac{k2\\pi }{3}$: với $k=0\\Rightarrow x=\\dfrac{\\pi }{9}$; với $k=1\\Rightarrow x=\\dfrac{7\\pi }{9}$ (thỏa mãn 2 nghiệm).<br>Nhánh $x=\\dfrac{k2\\pi }{3}$: với $k=1\\Rightarrow x=\\dfrac{2\\pi }{3}$ (thỏa mãn 1 nghiệm).<br>Vậy phương tŕnh có tất cả 3 nghiệm trên khoảng $\\left(0;\\pi \\right)$."
         },
         {
             "id": 2,
@@ -250,12 +250,12 @@ window.EXAM_DATA = {
         {
             "id": 4,
             "content": "Phương tŕnh $2\\cos \\left(2x+\\dfrac{\\pi }{4} \\right)-\\sqrt{2}=0$ có bao nhiêu nghiệm trên khoảng $\\left(-\\dfrac{\\pi }{2};\\pi \\right)$",
-            "solution": "Đáp án: 3<br>$2\\cos \\left(2x+\\dfrac{\\pi }{4} \\right)-\\sqrt{2}=0\\Leftrightarrow \\cos \\left(2x+\\dfrac{\\pi }{4} \\right)=\\dfrac{\\sqrt{2}}{2}=\\cos \\dfrac{\\pi }{4}$<br>$\\Leftrightarrow \\left[ \\begin{matrix} 2x+\\dfrac{\\pi }{4}=\\dfrac{\\pi }{4}+k2\\pi \\\\ 2x+\\dfrac{\\pi }{4}=-\\dfrac{\\pi }{4}+k2\\pi \\\\ \\end{matrix} \\right.\\Leftrightarrow \\left[ \\begin{matrix} 2x=k2\\pi \\\\ 2x=-\\dfrac{\\pi }{2}+k2\\pi \\\\ \\end{matrix} \\right.\\Leftrightarrow \\left[ \\begin{matrix} x=k\\pi \\\\ x=-\\dfrac{\\pi }{4}+k\\pi \\\\ \\end{matrix} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Vậy tập nghiệm của phương tŕnh là: $S=\\left\\{ k\\pi ;-\\dfrac{\\pi }{4}+k\\pi \\ |\\ k\\in \\mathbb{Z} \\right\\}$"
+            "solution": "Đáp án: 3<br>$2\\cos \\left(2x+\\dfrac{\\pi }{4} \\right)-\\sqrt{2}=0\\Leftrightarrow \\cos \\left(2x+\\dfrac{\\pi }{4} \\right)=\\dfrac{\\sqrt{2}}{2}=\\cos \\dfrac{\\pi }{4}$<br>$\\Leftrightarrow \\left[ \\begin{array}{l} 2x+\\dfrac{\\pi }{4}=\\dfrac{\\pi }{4}+k2\\pi \\\\ 2x+\\dfrac{\\pi }{4}=-\\dfrac{\\pi }{4}+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} 2x=k2\\pi \\\\ 2x=-\\dfrac{\\pi }{2}+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} x=k\\pi \\\\ x=-\\dfrac{\\pi }{4}+k\\pi \\end{array} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Vậy tập nghiệm của phương tŕnh là: $S=\\left\\{ k\\pi ;-\\dfrac{\\pi }{4}+k\\pi \\ |\\ k\\in \\mathbb{Z} \\right\\}$"
         },
         {
             "id": 5,
             "content": "Một ṿng quay Mặt Trời trong công viên giải trí có bán kính $R=20\\text{ m}$, tâm của trục quay cách mặt đất $25\\text{ m}$. Ṿng quay quay đều quanh trục theo chiều ngược chiều kim đồng hồ với tốc độ $1\\text{ ṿng}$ hết $40\\text{ giây}$. Giả sử một hành khách bước vào cabin tại vị trí thấp nhất của ṿng quay (cách mặt đất $5\\text{ m}$). Trong ṿng quay đầu tiên ($0\\le t\\le 40$), ở những thời điểm nào thì cabin ở độ cao $35\\text{ m}$ so với mặt đất? (kết quả làm tṛn đến hàng phần chục).",
-            "solution": "Đáp án: 26,7<br>Khi cabin ở độ cao $35\\text{ m}$: $25-20\\cos \\left(\\dfrac{\\pi t}{20} \\right)=35\\Leftrightarrow \\cos \\left(\\dfrac{\\pi t}{20} \\right)=-\\dfrac{1}{2}=\\cos \\dfrac{2\\pi }{3}$<br>$\\Leftrightarrow \\left[ \\begin{matrix} \\dfrac{\\pi t}{20}=\\dfrac{2\\pi }{3}+k2\\pi \\\\ \\dfrac{\\pi t}{20}=-\\dfrac{2\\pi }{3}+k2\\pi \\\\ \\end{matrix} \\right.\\Leftrightarrow \\left[ \\begin{matrix} t=\\dfrac{40}{3}+40k \\\\ t=-\\dfrac{40}{3}+40k \\\\ \\end{matrix} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Trong ṿng quay đầu tiên ($0\\le t\\le 40$):<br>Nhánh $t=\\dfrac{40}{3}+40k$: chọn $k=0\\Rightarrow t=\\dfrac{40}{3}\\text{ (giây)}$.<br>Nhánh $t=-\\dfrac{40}{3}+40k$: chọn $k=1\\Rightarrow t=\\dfrac{80}{3}\\text{ (giây)}$.<br>Vậy sau $\\dfrac{40}{3}\\text{ giây}$ (khoảng $13,3\\text{ s}$) và $\\dfrac{80}{3}\\text{ giây}$ (khoảng $26,7\\text{ s}$) thì cabin ở độ cao $35\\text{ m}$."
+            "solution": "Đáp án: 26,7<br>Khi cabin ở độ cao $35\\text{ m}$: $25-20\\cos \\left(\\dfrac{\\pi t}{20} \\right)=35\\Leftrightarrow \\cos \\left(\\dfrac{\\pi t}{20} \\right)=-\\dfrac{1}{2}=\\cos \\dfrac{2\\pi }{3}$<br>$\\Leftrightarrow \\left[ \\begin{array}{l} \\dfrac{\\pi t}{20}=\\dfrac{2\\pi }{3}+k2\\pi \\\\ \\dfrac{\\pi t}{20}=-\\dfrac{2\\pi }{3}+k2\\pi \\end{array} \\right.\\Leftrightarrow \\left[ \\begin{array}{l} t=\\dfrac{40}{3}+40k \\\\ t=-\\dfrac{40}{3}+40k \\end{array} \\right.\\ \\left(k\\in \\mathbb{Z} \\right)$<br>Trong ṿng quay đầu tiên ($0\\le t\\le 40$):<br>Nhánh $t=\\dfrac{40}{3}+40k$: chọn $k=0\\Rightarrow t=\\dfrac{40}{3}\\text{ (giây)}$.<br>Nhánh $t=-\\dfrac{40}{3}+40k$: chọn $k=1\\Rightarrow t=\\dfrac{80}{3}\\text{ (giây)}$.<br>Vậy sau $\\dfrac{40}{3}\\text{ giây}$ (khoảng $13,3\\text{ s}$) và $\\dfrac{80}{3}\\text{ giây}$ (khoảng $26,7\\text{ s}$) thì cabin ở độ cao $35\\text{ m}$."
         },
         {
             "id": 6,
