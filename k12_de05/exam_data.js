@@ -39,7 +39,7 @@ window.EXAM_DATA = {
         },
         {
             "id": 4,
-            "content": "Cho hàm số $y=f\\left(x\\right)$ có đồ thị như hình vẽ. <br><img src=\"k12_de05/temp_exam_files/image3.png\" class=\"is-diagram\"><br><b></b> Điểm cực đại của đồ thị hàm số đã cho là",
+            "content": "Cho hàm số $y=f\\left(x\\right)$ có đồ thị như hình vẽ. <br><img src=\"k12_de05/temp_exam_files/image3.png\" class=\"is-diagram\"><br> <b></b> Điểm cực đại của đồ thị hàm số đã cho là",
             "options": [
                 "</b>$-1$",
                 "</b>$1$",
@@ -159,7 +159,7 @@ window.EXAM_DATA = {
                     "text": "Giá trị nhỏ nhất<b> </b>của hàm số  $f\\left(x\\right)=x^{2} \\ln x$ trên đoạn $\\left[\\frac{1}{e} ;e\\right]$ là $\\frac{-1}{2e}$."
                 }
             ],
-            "solution": "<b>a)</b> Tập xác định của hàm số là $D=\\left(0;+\\infty \\right)$<br><b>b)</b> Đạo hàm của hàm số $f\\left(x\\right)=x^{2} \\ln x$ là $f'\\left(x\\right)=x\\left(2\\ln x+1\\right)$. Đúng<br><b>c) </b>Ta có $f'\\left(x\\right)=0\\Leftrightarrow x\\left(2\\ln x+1\\right)=0\\Leftrightarrow \\left[\\begin{array}{c} {x=0} \\ {x=e^{\\frac{-1}{2} } } \\end{array}\\right.$<br>Bảng biến thiên<br><b><br><img src=\"k12_de05/temp_exam_files/image11.png\" class=\"is-diagram\"><br></b><br>Từ BBT suy ra hàm số không đồng biến trên khoảng $\\left(\\frac{1}{e} ;1\\right)$.  Sai<br><b>d)</b> Từ BBT suy ra giá trị nhỏ nhất<b> </b>của hàm số  $f\\left(x\\right)=x^{2} \\ln x$ trên đoạn $\\left[\\frac{1}{e} ;e\\right]$ là $\\frac{-1}{2e}$. Đúng"
+            "solution": "<b>a)</b> Tập xác định của hàm số là $D=\\left(0;+\\infty \\right)$<br><b>b)</b> Đạo hàm của hàm số $f\\left(x\\right)=x^{2} \\ln x$ là $f'\\left(x\\right)=x\\left(2\\ln x+1\\right)$. Đúng<br><b>c) </b>Ta có $f'\\left(x\\right)=0\\Leftrightarrow x\\left(2\\ln x+1\\right)=0\\Leftrightarrow \\left[\\begin{array}{c} {x=0} \\ {x=e^{\\frac{-1}{2} } } \\end{array}\\right.$<br>Bảng biến thiên<br><b><br><br><img src=\"k12_de05/temp_exam_files/image11.png\" class=\"is-diagram\"><br> </b><br>Từ BBT suy ra hàm số không đồng biến trên khoảng $\\left(\\frac{1}{e} ;1\\right)$.  Sai<br><b>d)</b> Từ BBT suy ra giá trị nhỏ nhất<b> </b>của hàm số  $f\\left(x\\right)=x^{2} \\ln x$ trên đoạn $\\left[\\frac{1}{e} ;e\\right]$ là $\\frac{-1}{2e}$. Đúng"
         },
         {
             "id": 2,
@@ -259,7 +259,7 @@ window.EXAM_DATA = {
         },
         {
             "id": 6,
-            "content": "<b> </b>Treo một vật nặng có trọng lượng $60\\, N$ bởi ba sợi dây giống hệt nhau, các sợi dây có độ dài bằng nhau và đôi một tạo với nhau một góc $90{}^\\circ$ như hình bên. Gọi $\\overrightarrow{F_{1} },\\, \\overrightarrow{F_{2} },\\, \\overrightarrow{F_{3} }$ lần lượt là các lực căng của ba sợi dây nói trên. Độ lớn của lực $\\overrightarrow{F_{1} }$ bằng bao nhiêu Niutơn? (Làm tròn kết quả đến hàng phần mười).<b></b> <br><img src=\"k12_de05/temp_exam_files/image16.png\" class=\"is-diagram\"><br><b></b>",
+            "content": "<b> </b>Treo một vật nặng có trọng lượng $60\\, N$ bởi ba sợi dây giống hệt nhau, các sợi dây có độ dài bằng nhau và đôi một tạo với nhau một góc $90{}^\\circ$ như hình bên. Gọi $\\overrightarrow{F_{1} },\\, \\overrightarrow{F_{2} },\\, \\overrightarrow{F_{3} }$ lần lượt là các lực căng của ba sợi dây nói trên. Độ lớn của lực $\\overrightarrow{F_{1} }$ bằng bao nhiêu Niutơn? (Làm tròn kết quả đến hàng phần mười).<b></b> <br><img src=\"k12_de05/temp_exam_files/image16.png\" class=\"is-diagram\"><br> <b></b>",
             "solution": "Đáp án: 34,6<br>Đặt vị trí vật tại điểm $O$, dựng lần lượt các vectơ $\\overrightarrow{F_{1} }=\\overrightarrow{OA},\\, \\overrightarrow{F_{2} }=\\overrightarrow{OE},\\, \\overrightarrow{F_{3} }=\\overrightarrow{OC}$.<br>Dựng hình lập phương $OABC.EFGH$<br><br><img src=\"k12_de05/temp_exam_files/image17.png\" class=\"is-diagram\"><br> Vì các sợi dây có độ dài bằng nhau và đôi một tạo với nhau một góc $90{}^\\circ$ nên $\\left|\\overrightarrow{F_{1} }\\right|=\\left|\\overrightarrow{F_{2} }\\right|=\\left|\\overrightarrow{F_{3} }\\right|$.<br>Theo quy tắc hình hộp, ta có: $\\overrightarrow{F_{1} }+\\overrightarrow{F_{2} }+\\overrightarrow{F_{3} }=\\overrightarrow{OG}=\\overrightarrow{F}\\Rightarrow \\, \\left|\\overrightarrow{F_{1} }+\\overrightarrow{F_{2} }+\\overrightarrow{F_{3} }\\right|=\\left|\\overrightarrow{OG}\\right|=\\left|\\overrightarrow{F}\\right|$.<br>Để vật cân bằng thì độ lớn của tổng hợp lực sẽ bằng với trọng lượng của vật.<br>Từ đó suy ra $\\left|\\overrightarrow{F}\\right|=60\\, N$, mà $OG=OA.\\sqrt{3}$ nên $\\left|\\overrightarrow{F_{1} }\\right|=\\frac{60}{\\sqrt{3} } \\approx 34,6\\, N$."
         }
     ],
